@@ -38,7 +38,7 @@ class SelectionTo(plugin.Plugin):
             duration_str = gtk.MenuItem(_('_%s' % timedelta(milliseconds=value)))
             submenu.append(duration_str)
 
-            d = datetime.fromtimestamp(value)
+            d = datetime.fromtimestamp(value/1000)
             date_str = gtk.MenuItem(_('_%s' % d.isoformat()))
             submenu.append(date_str)
 
